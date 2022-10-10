@@ -1,0 +1,32 @@
+#container{
+    padding: 0 20%;
+}
+
+.button{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    background-color: #6818b5;
+    padding: 10px 50px;
+    border-radius: 25px;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+/* HOVER */
+.button:hover{
+    background-color: #561692;
+}
+
+@media screen and (max-width:1200px){
+    #container{
+        padding: 0 15%;
+    }
+}
+
+@media screen and (max-width:600px){
+    #container{
+        padding: 0 10%;
+    }
+}
