@@ -1,0 +1,11 @@
+<section id="cardContainer">
+    <section id="cardBody" *ngFor="let info of cardInfo">
+        <img width="80" height="80" src="../../../assets/icons/{{info.icon}}" alt="{{info.alt}}">
+        <div class="alert" *ngIf="info.alt === 'indisponivel'">
+            <small>Em breve!</small> 
+        </div>
+        <br *ngIf="info.alt !== 'indisponivel'"><br *ngIf="info.alt !== 'indisponivel'">
+        <h1>{{info.title}}</h1>
+        <p>{{info.about}}</p>
+    </section>
+</section>
