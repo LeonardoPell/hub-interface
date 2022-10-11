@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './modules/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
+import { HomeCardComponent } from './modules/home-card/home-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    HomeCardComponent
   ],
   imports: [
     BrowserModule,
@@ -19,6 +21,7 @@ import { HomeComponent } from './pages/home/home.component';
     BrowserAnimationsModule
   ],
   providers: [],
+  exports: [HomeCardComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
