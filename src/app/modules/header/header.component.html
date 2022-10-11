@@ -1,5 +1,5 @@
 <header id="container">
-    <section id="logo"><H1>LOGO</H1></section>
+    <section id="logo"><a *ngIf="showLogo" [routerLink]="'/'"><img src="../../../assets/logo/logo4.png" alt="Logo"></a></section>
     <section id="links">
         <nav id="loginLinks">
             <a class="button registerButton" [routerLink]="'/register'">Cadastre-se</a>

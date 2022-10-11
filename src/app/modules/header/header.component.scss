@@ -4,6 +4,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color:  #33003d;
 }
 
 .buttonHeader{
@@ -12,4 +13,18 @@ header{
 
 .registerButton{
     padding: 10px 32px !important;
+}
+
+section#logo{
+    a{
+        img{
+            width: 2rem;
+        }
+    }
+}
+
+@media screen and (max-width:600px){
+    header{
+        display: none;
+    }
 }
