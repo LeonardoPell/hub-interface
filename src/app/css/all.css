@@ -11,6 +11,12 @@
     border-radius: 25px;
     cursor: pointer;
     text-align: center;
+    border: 0;
+}
+
+.formButton{
+    border-radius: 7px !important;
+    font-size: 18px;
 }
 
 
