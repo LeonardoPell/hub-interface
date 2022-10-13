@@ -1,0 +1,40 @@
+<section id="containerRegister">
+    <form [formGroup]="registerForm">
+        <nav class="logoContainer">
+            <a [routerLink]="'/'"><img class="logoImg" src="../../../assets/logo/logo1.png" alt="Logo"></a>
+        </nav>
+        <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label>Nome:</mat-label>
+            <input matInput formControlName="registerName" name="registerName" placeholder="Digite seu nome...">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label>Email:</mat-label>
+            <input matInput formControlName="registerEmail" name="registerEmail" placeholder="Digite seu e-mail...">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label class="registerInput">Senha:</mat-label>
+            <input [type]="hide ? 'password' : 'text'" matInput formControlName="registerPass" name="registerPass" class="registerPass" placeholder="Digite sua senha...">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label class="registerInput">Confirme a senha:</mat-label>
+            <input [type]="hide ? 'password' : 'text'" matInput formControlName="registerConfirmPass" name="registerConfirmPass" class="registerConfirmPass" placeholder="Digite sua senha...">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Escolha sua data de nascimento:</mat-label>
+            <input [matDatepicker]="picker" matInput formControlName="registerBirthdate" name="registerBirthdate">
+            <mat-hint>DD/MM/YYYY</mat-hint>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <br>
+        <button class="button formButton">Cadastrar</button>
+        <br>
+        <a [routerLink]="'/login'" class="button formButton">Entrar agora!</a>
+    </form>
+</section>
